@@ -18,12 +18,17 @@ The actual bot has many more parameters and those can be changed in the actual c
 ## Installation & Run GUI
 
 - To install the GUI: Navigate to the folder path you desire to make the Install
-    git clone "https://github.com/Mick1406/GUI_for_InstagramBot.git"
-
+```
+git clone "https://github.com/Mick1406/GUI_for_InstagramBot.git"
+```
 Or alternatively, download the zip files by pressing download ZIP button
 
 
 - To run the GUI, type in the following command in the terminal:
-    python GUI_Instagrambot.py
+```
+python GUI_Instagrambot.py
+```
 Or
-    python GUI_Instagrambot.py
+```
+python GUI_Instagrambot.py
+```

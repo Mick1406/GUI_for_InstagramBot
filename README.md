@@ -6,7 +6,8 @@ Minimal Interface for using Instagram Bot controlling
  - number of likes per day
  - number of follows per day
  - number of unfollows per day
-For a given list of htags!
+
+*For a given list of htags!*
 
 The actual bot has many more parameters and those can be changed in the actual code GUI_Instagrambot.py
 
@@ -14,4 +15,15 @@ The actual bot has many more parameters and those can be changed in the actual c
 
 ![Screenshot](/Screenshot_GUI_InstaBot.png)
 
-## Installation
+## Installation & Run GUI
+
+- To install the GUI: Navigate to the folder path you desire to make the Install
+    git clone "https://github.com/Mick1406/GUI_for_InstagramBot.git"
+
+Or alternatively, download the zip files by pressing download ZIP button
+
+
+- To run the GUI, type in the following command in the terminal:
+    python GUI_Instagrambot.py
+Or
+    python GUI_Instagrambot.py

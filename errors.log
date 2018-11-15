@@ -1,0 +1,168 @@
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 381, in get_media_id_by_tag
+    all_data = json.loads(r.text)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 379, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+TypeError: getresponse() got an unexpected keyword argument 'buffering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michaelcarraz/Documents/bots/instabot/instabot_withGUI/src/instabot.py", line 380, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/sessions.py", line 501, in get
+    return self.request('GET', url, **kwargs)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/adapters.py", line 423, in send
+    timeout=timeout
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/requests/packages/urllib3/contrib/pyopenssl.py", line 277, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "/Users/michaelcarraz/anaconda/lib/python3.6/site-packages/OpenSSL/SSL.py", line 1334, in recv_into
+    result = _lib.SSL_read(self._ssl, buf, nbytes)
+KeyboardInterrupt

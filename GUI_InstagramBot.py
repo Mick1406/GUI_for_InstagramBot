@@ -9,13 +9,15 @@
 
 # import modules and my instagram bot
 import tkinter as tk
+from tkinter import Entry, IntVar, StringVar, Text
 import random
 import sys
 import os
 import logging
 import threading
 import tkinter.scrolledtext as ScrolledText
-import subprocess
+import subprocess as sub
+from multiprocessing import Process, Queue
 import requests
 
 sys.path.append(os.path.join(sys.path[0],'src'))
@@ -30,26 +32,46 @@ import time
 # set the window and title
 window = tk.Tk()
 window.title("Instagram Bot")
-window.geometry("700x500")
+window.geometry("750x600")
 
 title = tk.Label(text="Hello dear user! Welcome to my Instagram bot App!",fg = "white",
 bg = "black",font = "Helvetica 18 bold italic")
 title.grid(column=0,row=0,padx=10, pady=20,sticky='nw')
 
 
+#----------------------------------------------------------------------------------#
+#                               Define GUI variables                               #
+#----------------------------------------------------------------------------------#
+likes = IntVar()
+follows = IntVar()
+unfollows = IntVar()
+tag = StringVar()
+username = StringVar()
+password = StringVar()
 
 
 #----------------------------------------------------------------------------------#
 ###                     function calling the BOT                                 ###
 #----------------------------------------------------------------------------------#
 
-#temp empty fct while building bot -> to delete
+#temp empty fct while building bot
 def null():
-    print('test')
+    print('template')
 
 def bot_fct():
 
-    bot = InstaBot(login=username_field, password=password_field,
+    # create the log print window within frame
+    terminalembed()
+
+    username_field = username.get()
+    password_field = password.get()
+    likes_field = likes.get()
+    follows_field = follows.get()
+    unfollows_field = unfollows.get()
+    tag_field = tag.get()
+
+    bot = InstaBot(login=username_field,
+                   password=password_field,
                    like_per_day=likes_field,
                    comments_per_day=0,
                    tag_list=[tag_field],
@@ -80,9 +102,6 @@ def bot_fct():
         ## USE MODE 5 IN BURST MODE, USE IT TO UNFOLLOW PEOPLE AS MANY AS YOU WANT IN SHORT TIME PERIOD
         mode = 0
 
-        #print("You choose mode : %i" %(mode))
-        #print("CTRL + C to cancel this operation or wait 30 seconds to start")
-        #time.sleep(30)
         if mode == 0 :
             bot.new_auto_mod()
         elif mode == 1 :
@@ -117,6 +136,23 @@ def bot_fct():
 
 
 
+running = True  # Global flag
+#
+# def scanning():
+#     if running:  # Only do this if the Stop button has not been clicked
+#         bot_fct()
+#     window.after(1000, scanning) # After 1 second, call scanning again (create a recursive loop)
+#
+# def start():
+#     global running
+#     running = True
+
+def stop():
+    global running
+    running = False
+
+
+
 #----------------------------------------------------------------------------------#
 ### Entry fields - only minimal entries. The actual bot has many more parameters ###
 #----------------------------------------------------------------------------------#
@@ -128,28 +164,28 @@ botparameters_min.grid(column=0,row=1,padx=10, pady=10,sticky='e')
 likes_label= tk.Label(text="Number of likes per day:")
 likes_label.grid(column=0, row=2, sticky='e', padx=4)
 
-likes_field = tk.Entry()
+likes_field = tk.Entry(textvariable=likes)
 likes_field.grid(column=1, row=2,sticky='w')
 
 # Follows per day
 follows_label= tk.Label(text="Number of follows per day:")
 follows_label.grid(column=0, row=3, sticky='e', padx=4)
 
-follows_field = tk.Entry()
+follows_field = tk.Entry(textvariable=follows)
 follows_field.grid(column=1, row=3,sticky='w')
 
 # Unfollows per day
 unfollows_label= tk.Label(text="Number of unfollows per day:")
 unfollows_label.grid(column=0, row=4, sticky='e', padx=4)
 
-unfollows_field = tk.Entry()
+unfollows_field = tk.Entry(textvariable=unfollows)
 unfollows_field.grid(column=1, row=4,sticky='w')
 
 # Tag list (list comma separator)
 tag_label= tk.Label(text="Enter hashtag list (separated with comma and do not put # in name):")
 tag_label.grid(column=0, row=5, sticky='e', padx=4)
 
-tag_field = tk.Entry()
+tag_field = tk.Entry(textvariable=tag)
 tag_field.grid(column=1, row=5,sticky='w')
 
 # Pass the entries into a list - implement some checks on format
@@ -168,14 +204,14 @@ botcredentials.grid(column=0,row=6,padx=10, pady=10,sticky='e')
 username_label= tk.Label(text="Instagram Username:")
 username_label.grid(column=0, row=7, sticky='e', padx=4)
 
-username_field = tk.Entry()
+username_field = tk.Entry(textvariable=username)
 username_field.grid(column=1, row=7,sticky='w')
 
 # password
 password_label= tk.Label(text="Instagram Password:")
 password_label.grid(column=0, row=8, sticky='e', padx=4)
 
-password_field = tk.Entry()
+password_field = tk.Entry(textvariable=password)
 password_field.grid(column=1, row=8,sticky='w')
 
 
@@ -193,10 +229,8 @@ password_field = wrap_and_encode(password_field)
 #---------------------------------#
 ### Start and Stop bot buttons ###
 #---------------------------------#
-# calling the bot with tkinter var arguments
-# temporary : insert bot code in bot_fct function
 
-startbot_btn = tk.Button(text="Start Bot" , command=start, bg="green",fg="green")
+startbot_btn = tk.Button(text="Start Bot" , command=bot_fct, bg="green",fg="green")
 startbot_btn.grid(column=0 , row=10, padx=20, pady=30,sticky='e')
 startbot_btn.config( height = 3, width = 10, font = "Helvetica 14 bold" )
 
@@ -204,8 +238,16 @@ stopbot_btn = tk.Button(text="Stop Bot" , command=stop, bg="red",fg="red")
 stopbot_btn.grid(column=1 , row=10, padx=20, pady=30,sticky='w')
 stopbot_btn.config( height = 3, width = 10, font = "Helvetica 14 bold" )
 
+#---------------------------------#
+### Close button                 ###
+#---------------------------------#
 
+def close():
+    sys.exit()
 
+close_btn = tk.Button(text='CLOSE', command=close,bg="grey",fg="grey")
+close_btn.grid(columnspan=2 ,column=0, row=11, padx=20, pady=30,sticky='w,e')
+close_btn.config( height = 4, width = 10, font = "Helvetica 20 bold" )
 
 #---------------------------------#
 # Warning and disclaimer
@@ -213,11 +255,20 @@ stopbot_btn.config( height = 3, width = 10, font = "Helvetica 14 bold" )
 
 instructions = """
 - By using this bot, you accept FULL responsability for the use and/or mis-use, which can  get you ban from Instagram.
-I recommend not being too greedy and not run too short burst with high number of likes, follows and unfollows.
+In no instance, can I be held responsible! Instagram is watching out for this kind of bots and your account could be locked out if you are being detected.
+I recommend not being too greedy and not running short burst with very high number of likes, follows and unfollows.
+It is better to run the bot consistently with a reasosnable # of likes and follows per day (e.g. 500 likes per day / 200 follows per day)
 
-- The hashtags list must be entered as followed: 'word1','word2',...
+- The hashtags list must be entered as followed: 'word1','word2',... (don't actually put the # symbol)
 
-- Number of likes, follows and unfollows are the number you want over a 24h period. Only integers can be entered
+- Number of likes, follows and unfollows are the number you want over a 24h period. Only integers can be entered. The bot will return an error if not.
+
+- This is a light App - GUI developed in less than a day. The interface doesn't have all the functionalities of the bot! Feel free to build upon it.
+
+* Author: Michael Carraz
+* Date: November 2018
+* Free licence
+
 """
 
 
@@ -230,28 +281,59 @@ def message():
     msg.config(bg='black',fg="white", font=('helvetica', 14))
     msg.pack()
 
-instruction_btn = tk.Button(text="ReadMe: Instructions" , command=message, fg="blue",bg="grey")
-instruction_btn.grid(column=0 , row=11, padx=10, pady=30,sticky='w')
-stopbot_btn.config( font = "Helvetica 12 bold",bg="grey" )
+# Add a close buttion to my informations frame to destroy it when clicked
+def close():
+    print ("Close")
+    top.destroy()
 
+instruction_btn = tk.Button(text="ReadMe: Instructions" , command=message, fg="blue",bg="grey")
+instruction_btn.grid(column=1 , row=0, padx=10, pady=30,sticky='w')
+stopbot_btn.config( font = "Helvetica 12 bold",bg="grey" )
 
 
 
 #----------------------------------------------------------#
 # Textbox collecting and displaying log informations
 #----------------------------------------------------------#
-# def botoutput():
-#     cmd = ["bot_fct", entry.get(), "-c", "2"]
-#     output = subprocess.check_output(cmd)
-#     #output = subprocess.check_output("ping {} -c 2".format(entry.get()), shell=True)
+def terminalembed():
+    terminal = tk.Tk()
+    terminal.title("Console")
+    terminal.attributes('-topmost', True)
+    wid = terminal.winfo_id()
+    os.system('xterm -into %d -geometry 40x20 -sb &' % wid)
+    # terminal.config(bg='black',fg="white", font=('helvetica', 14))
+
+# class Display(tk.Frame):
+#     def __init__(self):
+#        tk.Frame.__init__(self)
 #
-#     print('>', output)
-#     # put result in label
-#     result['text'] = output.decode('utf-8')
+#        self.output = tk.Text(self, width=100, height=15, background = 'black', fg='white')
+#        self.output.pack(side=tk.LEFT)
 #
-# log = tk.Label(text=result)
-# log.pack()
+#        self.scrollbar = tk.Scrollbar(self, orient="vertical", command = self.output.yview)
+#        self.scrollbar.pack(side=tk.RIGHT, fill="y")
+#
+#        self.output['yscrollcommand'] = self.scrollbar.set
+#
+#        self.count = 1
+#        self.configure(background='black')
+#        self.grid(row=11, padx=50, pady=50,sticky='w')
+
+# if __name__ == '__main__':
+#     Display().mainloop()
+
+# def logprint():
+#     if __name__ == '__main__':
+#         queue = Queue()
+#         p = Process(target=bot_fct)
+#         p.start()
+#         p.join() # this blocks until the process terminates
+#         result = queue.get()
+#         #print result
+#
+#     text = Text(window)
+#     text.grid(row=11, padx=50, pady=50,sticky='e')
+#     text.insert(END, result)
 
 
-window.after(1000, scanning)
 window.mainloop()

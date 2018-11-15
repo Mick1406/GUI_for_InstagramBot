@@ -12,6 +12,6 @@ The actual bot has many more parameters and those can be changed in the actual c
 
 ## Screenshot
 
-![Screenshot](https://github.com/Mick1406/GUI_for_InstagramBot/"Screenshot GUI Insta Bot".png)
+![Screenshot](https://github.com/Mick1406/GUI_for_InstagramBot/Screenshot_GUI_InstaBot.png)
 
 ## Installation

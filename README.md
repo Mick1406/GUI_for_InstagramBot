@@ -32,3 +32,8 @@ Or, if you have both Python 2.7 and Python 3.x installed (with 2.7 as default)
 ```
 python3 GUI_Instagrambot.py
 ```
+
+## Disclaimer
+
+Under no circumstances shall I be liable for any direct and indirect consequences for using the app!
+Be aware that using this app intensively may get you locked out from Instagram account.

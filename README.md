@@ -28,7 +28,7 @@ Or alternatively, download the zip files by pressing download ZIP button
 ```
 python GUI_Instagrambot.py
 ```
-Or
+Or, if you have both Python 2.7 and Python 3.x installed (with 2.7 as default)
 ```
-python GUI_Instagrambot.py
+python3 GUI_Instagrambot.py
 ```

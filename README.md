@@ -9,7 +9,7 @@ Minimal Interface for using Instagram Bot controlling
 
 *For a given list of htags!*
 
-The actual bot has many more parameters and those can be changed in the actual code GUI_Instagrambot.py
+The actual bot has many more parameters and those can be changed in GUI_Instagrambot.py
 
 ## Screenshot
 
@@ -17,7 +17,7 @@ The actual bot has many more parameters and those can be changed in the actual c
 
 ## Installation & Run GUI
 
-- To install the GUI: Navigate to the folder path you desire to make the Install
+- To install the GUI: Navigate to the folder path you would like to make the Install
 ```
 git clone "https://github.com/Mick1406/GUI_for_InstagramBot.git"
 ```
@@ -36,4 +36,4 @@ python3 GUI_Instagrambot.py
 ## Disclaimer
 
 Under no circumstances shall I be liable for any direct and indirect consequences for using the app!
-Be aware that using this app intensively may get you locked out from Instagram account.
+Be aware that using this app intensively may get you locked out from your Instagram account.
